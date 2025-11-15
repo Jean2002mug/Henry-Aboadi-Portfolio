@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Henry Aboadi | Environmental Science Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Henry Kwesi Nukunu Junior Aboadi, Environmental Science graduate specializing in HSE, environmental compliance, pollution control and waste management."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #05090a;
+      --bg-alt: #0b1517;
+      --card: #0f1d20;
+      --accent: #26c281;
+      --accent-soft: rgba(38, 194, 129, 0.12);
+      --text: #f5f7f8;
+      --muted: #9ba6b2;
+      --border: #1d2b30;
+      --danger: #ffb55a;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.44);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --transition-fast: 180ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #132323 0, #05090a 45%, #020304 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px clamp(20px, 4vw, 32px) 60px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 9, 10, 0.95),
+        rgba(5, 9, 10, 0.7),
+        transparent
+      );
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px clamp(20px, 4vw, 32px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 14px;
+      background: conic-gradient(
+        from 220deg,
+        #26c281,
+        #38a1ff,
+        #ffd66b,
+        #26c281
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-soft);
+      font-size: 18px;
+      font-weight: 700;
+      color: #020304;
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-title span:first-child {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-title span:last-child {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      transition: background var(--transition-fast), color var(--transition-fast),
+        transform var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pill {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-soft);
+      border: 1px solid rgba(38, 194, 129, 0.4);
+      font-size: 11px;
+      color: #d5ffe9;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(38, 194, 129, 0.36);
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      padding: 8px 14px;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      background: var(--accent);
+      color: #02120a;
+      font-weight: 600;
+      box-shadow: 0 12px 25px rgba(38, 194, 129, 0.35);
+      transition: transform 160ms ease-out, box-shadow 160ms ease-out,
+        background 160ms ease-out;
+    }
+
+    .btn span.icon {
+      display: inline-flex;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(38, 194, 129, 0.45);
+      background: #31d78f;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      box-shadow: none;
+      border-color: rgba(151, 173, 188, 0.4);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Hero */
+
+    .hero {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(6, 15, 16, 0.88);
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 12px;
+    }
+
+    .hero-eyebrow span.badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: var(--radius-pill);
+      background: rgba(58, 199, 128, 0.12);
+      color: #baf7d8;
+      border: 1px solid rgba(58, 199, 128, 0.6);
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 4vw, 40px);
+      line-height: 1.1;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title span.accent {
+      background: linear-gradient(120deg, #26c281, #5ad0ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      max-width: 520px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-meta span::before {
+      content: "●";
+      font-size: 8px;
+      color: var(--accent);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: radial-gradient(circle at top left, #19312a 0, #060b0c 35%, #05090a 100%);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 18px;
+    }
+
+    .hero-photo {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      max-height: 280px;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-card-footer {
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-tagline {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hero-tagline strong {
+      font-size: 12px;
+      color: var(--text);
+    }
+
+    .stat-chip {
+      padding: 6px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(3, 29, 16, 0.9);
+      border: 1px solid rgba(35, 196, 129, 0.6);
+      color: #b2ffe0;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 2px;
+      text-align: right;
+    }
+
+    .stat-chip span.value {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .stat-chip span.label {
+      font-size: 10px;
+    }
+
+    /* Sections */
+
+    section {
+      margin-top: 46px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title span.dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .section-caption {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 18px 18px 20px;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.32);
+    }
+
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .chip {
+      padding: 5px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(151, 173, 188, 0.55);
+      background: rgba(9, 17, 18, 0.9);
+      font-size: 11px;
+      color: #dbe4ee;
+    }
+
+    .chip.accent {
+      border-color: rgba(38, 194, 129, 0.8);
+      background: rgba(38, 194, 129, 0.12);
+      color: #c9ffe7;
+    }
+
+    /* Experience */
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      border-radius: calc(var(--radius-lg) - 4px);
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top left, #122624 0, #05090a 40%, #020304 100%);
+      padding: 14px 14px 13px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        rgba(38, 194, 129, 0.16),
+        transparent 38%
+      );
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-fast);
+    }
+
+    .timeline-item:hover::before {
+      opacity: 1;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-role {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .timeline-company {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .timeline-meta {
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+
+    .timeline-tags {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .timeline-tags span {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(151, 173, 188, 0.45);
+      color: #d4dde7;
+      background: rgba(7, 13, 13, 0.9);
+    }
+
+    .timeline ul {
+      margin-top: 6px;
+      padding-left: 16px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .timeline li {
+      margin-bottom: 4px;
+    }
+
+    /* Education + Skills */
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 2.3fr);
+      gap: 22px;
+    }
+
+    .edu-item {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .edu-item strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .edu-meta {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .skills-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .skill-group h4 {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .skill-group .pill-row {
+      margin-top: 4px;
+    }
+
+    /* Contact */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 2.2fr);
+      gap: 24px;
+    }
+
+    .contact-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .contact-details {
+      font-size: 13px;
+      display: grid;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .contact-details span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .contact-details span strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .field {
+      display: grid;
+      gap: 4px;
+    }
+
+    .field label {
+      color: var(--muted);
+    }
+
+    .field input,
+    .field textarea {
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(2, 7, 7, 0.9);
+      color: var(--text);
+      font-size: 13px;
+      padding: 8px 10px;
+      outline: none;
+      resize: vertical;
+      min-height: 40px;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(38, 194, 129, 0.9);
+      box-shadow: 0 0 0 1px rgba(38, 194, 129, 0.3);
+    }
+
+    footer {
+      max-width: 1120px;
+      margin: 40px auto 10px;
+      padding: 0 clamp(20px, 4vw, 32px);
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      opacity: 0.7;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 880px) {
+      .hero,
+      .about-grid,
+      .two-col,
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        margin-top: 24px;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .hero-card {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        padding-inline: 18px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .page {
+        padding-inline: 18px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn,
+      .btn-ghost {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="nav-logo">H</div>
+        <div class="nav-title">
+          <span>Henry Aboadi</span>
+          <span>Environmental Science &amp; HSE</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <div class="pill">
+          <span class="pill-dot"></span>
+          Open to HSE &amp; Environmental roles
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="badge">New graduate</span>
+          BSc Environmental Science · Health, Safety &amp; Environment
+        </div>
+        <h1 class="hero-title">
+          Protecting people and ecosystems through
+          <span class="accent">evidence-based environmental practice.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Henry is an Environmental Science graduate with hands-on experience in HSE,
+          public health enforcement, EIA monitoring and sustainable waste management
+          across construction, industrial and municipal settings.
+        </p>
+        <div class="hero-meta">
+          <span>Environmental Science · HSE · Pollution Control · Waste Management</span>
+          <span>Based in Accra, Ghana · Open to opportunities in sustainability, HSE &amp; environmental compliance</span>
+        </div>
+        <div class="hero-actions">
+          <a href="mailto:aboadihenry3@gmail.com" class="btn">
+            <span class="icon">✉️</span>
+            Contact Henry
+          </a>
+          <a href="HENRY ABOADI-CV & Certificate.pdf" class="btn btn-ghost" target="_blank">
+            <span class="icon">⬇️</span>
+            Download CV
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <article class="hero-card" aria-label="Portrait of Henry Aboadi">
+          <div class="hero-photo">
+            <img src="image/Henry_Aboadi.jpg" alt="Henry Aboadi at an event" />
+          </div>
+          <div class="hero-card-footer">
+            <div class="hero-tagline">
+              <strong>Health, Safety &amp; Environment | Environmental Science</strong>
+              <span>Field exposure in construction, public health, cleaner production and PV recycling.</span>
+            </div>
+            <div class="stat-chip">
+              <span class="value">4+ projects</span>
+              <span class="label">HSE &amp; environmental initiatives supported</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="dot"></span>
+          <span>About Henry</span>
+        </div>
+        <p class="section-caption">Environmental Science graduate with a focus on HSE &amp; sustainable practices.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="card">
+          <h3>Profile</h3>
+          <p>
+            Henry is dedicated to building safer workplaces and reducing environmental impact in
+            resource-intensive sectors. His experience spans health, safety and environmental
+            compliance on construction sites, public health inspections and enforcement, monitoring
+            Environmental Impact Assessments, and contributing to cleaner production initiatives.
+          </p>
+          <p style="margin-top:8px;">
+            He is particularly interested in applying HSE protocols, pollution control and waste
+            management to sectors such as construction, mining and renewable energy, while ensuring
+            that operational decisions respect ecosystems and local communities.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Focus Areas</h3>
+          <div class="pill-row">
+            <span class="chip accent">Health, Safety &amp; Environment (HSE)</span>
+            <span class="chip accent">Environmental Compliance</span>
+            <span class="chip accent">Pollution &amp; Toxicology</span>
+            <span class="chip">Waste &amp; Plastic Management</span>
+            <span class="chip">EIA Monitoring &amp; Reporting</span>
+            <span class="chip">Public Health Inspections</span>
+            <span class="chip">Sustainable Energy &amp; PV Recycling</span>
+            <span class="chip">Data Analysis (IBM SPSS)</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="dot"></span>
+          <span>Experience</span>
+        </div>
+        <p class="section-caption">Practical HSE and environmental work across construction, municipal and industrial contexts.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Pernim -->
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">National Service Personnel · Project &amp; HSE Support</div>
+              <div class="timeline-company">Pernim Company Limited · Bank of Ghana Headquarters Project</div>
+            </div>
+            <div class="timeline-meta">
+              <span>Dec 2024 – Present</span>
+              <span>Accra, Ghana</span>
+            </div>
+          </div>
+          <ul>
+            <li>Organizes and delivers pre-task safety briefings for construction and electrical engineers on site.</li>
+            <li>Leads worker induction sessions to embed safety procedures and site-specific HSE standards.</li>
+            <li>Monitors daily safety compliance, identifying deviations during both active work and idle periods.</li>
+            <li>Supports safe installation of grand canopy scaffolding and supervises electrical work compliance.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Construction HSE</span>
+            <span>Risk Mitigation</span>
+            <span>Toolbox Talks &amp; Inductions</span>
+            <span>Scaffolding Safety</span>
+          </div>
+        </article>
+
+        <!-- Oyarifa Zonal Council -->
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Environmental Intern · Public Health</div>
+              <div class="timeline-company">Oyarifa Zonal Council</div>
+            </div>
+            <div class="timeline-meta">
+              <span>Oct 2023 – Dec 2023</span>
+              <span>Oyarifa, Ghana</span>
+            </div>
+          </div>
+          <ul>
+            <li>Conducted joint inspections with Environmental Health Officers for 17 restaurants and shops.</li>
+            <li>Identified and documented 11 public health violations, recommending corrective actions.</li>
+            <li>Supported enforcement of public health regulations through court actions to protect community health.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Public Health Enforcement</span>
+            <span>Regulatory Compliance</span>
+            <span>Community Health</span>
+          </div>
+        </article>
+
+        <!-- PV Recycling / Bochum -->
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Research Intern · PV Recycling &amp; Circular Economy</div>
+              <div class="timeline-company">Joint Project with Ruhr University Bochum, Germany</div>
+            </div>
+            <div class="timeline-meta">
+              <span>Feb 2023 – Jun 2023</span>
+              <span>International Collaboration</span>
+            </div>
+          </div>
+          <ul>
+            <li>Collaborated with international students to analyze environmental impacts of photovoltaic modules.</li>
+            <li>Explored and evaluated innovative recycling methods in global and Ghanaian contexts.</li>
+            <li>Deepened understanding of the circular economy in relation to sustainable energy systems.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Renewable Energy</span>
+            <span>PV Life-Cycle Assessment</span>
+            <span>Circular Economy</span>
+          </div>
+        </article>
+
+        <!-- GNCP -->
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Environmental Intern · EIA &amp; Cleaner Production</div>
+              <div class="timeline-company">Ghana National Cleaner Production Centre, Tema</div>
+            </div>
+            <div class="timeline-meta">
+              <span>Oct 2021 – Dec 2021</span>
+              <span>Tema, Ghana</span>
+            </div>
+          </div>
+          <ul>
+            <li>Monitored Environmental Impact Assessments to ensure proposed projects met national standards.</li>
+            <li>Reviewed development proposals for the EPA, highlighting environmental risks and mitigation options.</li>
+            <li>Supported a UNIDO initiative by helping design an Energy Conservation Module for industry.</li>
+            <li>Completed practical training in plastic sorting and recycling, strengthening waste management skills.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>EIA Monitoring</span>
+            <span>Industrial Ecology</span>
+            <span>Energy Efficiency</span>
+            <span>Plastic Recycling</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education & Skills -->
+    <section id="education">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="dot"></span>
+          <span>Education &amp; Skills</span>
+        </div>
+        <p class="section-caption">Academic foundation in Environmental Science and analytical tools.</p>
+      </div>
+
+      <div class="two-col">
+        <article class="card">
+          <h3>Education</h3>
+          <div class="edu-item">
+            <strong>BSc Environmental Science · Second Class Upper</strong>
+            <div class="edu-meta">
+              Kwame Nkrumah University of Science and Technology (KNUST), Kumasi · Jan 2021 – Sept 2024
+            </div>
+            <p>
+              Relevant coursework: Environmental Pollution, Toxicology, Environmental Law, Geography, Microbiology,
+              Environmental Management. Thesis on inappropriate disposal of waste vehicle engine lubrication oil in Adenta
+              and Oyarifa, Ghana.
+            </p>
+          </div>
+
+          <div class="edu-item">
+            <strong>WASSCE · Science</strong>
+            <div class="edu-meta">
+              St. Peter’s Mission Senior High School · Sept 2017 – Sept 2020
+            </div>
+            <p>Science track with strong grounding in core subjects supporting environmental and analytical work.</p>
+          </div>
+        </article>
+
+        <article class="card" id="skills">
+          <h3>Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h4>Core Competencies</h4>
+              <div class="pill-row">
+                <span class="chip">Effective Communication</span>
+                <span class="chip">Team Coordination</span>
+                <span class="chip">Analytical &amp; Critical Thinking</span>
+                <span class="chip">Problem-Solving</span>
+                <span class="chip">Adaptability</span>
+                <span class="chip">Cultural Awareness</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Technical &amp; Analytical</h4>
+              <div class="pill-row">
+                <span class="chip accent">IBM SPSS</span>
+                <span class="chip accent">Microsoft Office (Excel, Word, PowerPoint)</span>
+                <span class="chip">Data Collection &amp; Cleaning</span>
+                <span class="chip">Field Survey Design</span>
+                <span class="chip">Report Writing</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Thematic Knowledge</h4>
+              <div class="pill-row">
+                <span class="chip">Environmental Law &amp; Policy</span>
+                <span class="chip">Pollution Control &amp; Toxicology</span>
+                <span class="chip">Waste Oil &amp; Plastic Management</span>
+                <span class="chip">Public Health &amp; Sanitation</span>
+                <span class="chip">Sustainable Energy &amp; PV Systems</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="dot"></span>
+          <span>Contact</span>
+        </div>
+        <p class="section-caption">Reach out to explore HSE, sustainability or environmental project opportunities.</p>
+      </div>
+
+      <div class="contact-layout">
+        <article class="card contact-card">
+          <h3>Let us collaborate on safer, cleaner projects.</h3>
+          <p>
+            Henry is interested in roles and collaborations that improve health and safety standards, reduce pollution,
+            support responsible waste management and strengthen environmental compliance frameworks.
+          </p>
+
+          <div class="contact-details">
+            <span>
+              📍 <strong>Ashaiman, Accra – Ghana</strong>
+            </span>
+            <span>
+              📞 <strong>+233 (0) 59 456 4291</strong>
+            </span>
+            <span>
+              ✉️ <a href="mailto:aboadihenry3@gmail.com"><strong>aboadihenry3@gmail.com</strong></a>
+            </span>
+            <span>
+              🔗 <a href="https://www.linkedin.com/in/henry-aboadi-65330a25a" target="_blank"><strong>LinkedIn Profile</strong></a>
+            </span>
+          </div>
+
+          <a href="mailto:aboadihenry3@gmail.com?subject=Environmental%20Science%20Opportunity%20for%20Henry%20Aboadi" class="btn">
+            <span class="icon">📩</span>
+            Email Henry directly
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Quick message</h3>
+          <!-- This is a static form; wire it up to a backend or form service if needed -->
+          <form class="contact-form">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your full name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="Share a project idea, role or collaboration..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-ghost">
+              <span class="icon">🚀</span>
+              Send (configure backend to activate)
+            </button>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Henry Kwesi Nukunu Junior Aboadi. All rights reserved.</span>
+    <span>Designed by Michel for Henry.</span>
+  </footer>
+
+  <script>
+    // Simple script to keep year current
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
